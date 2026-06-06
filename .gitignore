@@ -1,0 +1,14 @@
+# Models
+*.pt
+
+# Images
+*.png
+*.jpg
+
+# Data
+*.csv
+
+# Runs
+runs/*
+
+# Build?
