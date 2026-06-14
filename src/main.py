@@ -1,13 +1,18 @@
-from ultralytics import YOLO
+import os
+import shutil
+import argparse
+from create_model import ModelMaker
 
 def main():
-    model = YOLO("yolo26n-seg.yaml")
-    results = model.train(data="coco8.yaml", epochs=3)
+    clean_runs()
+    model_maker = ModelMaker()
+    model = model_maker.run()
 
-    results = model.val()
-    model.
 
-    results = model("https://ultralytics.com/images/bus.jpg")
+def clean_runs():
+    shutil.rmtree("./runs")    
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--create")
     main()

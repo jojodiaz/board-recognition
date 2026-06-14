@@ -11,4 +11,8 @@
 # Runs
 runs/*
 
-# Build?
+# Datasets
+datasets/*
+
+# Sensitive Data
+.env
