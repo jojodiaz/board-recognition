@@ -16,3 +16,6 @@ datasets/*
 
 # Sensitive Data
 .env
+
+# Other
+*.pyc

@@ -5,8 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "dotenv>=0.9.9",
+    "python-dotenv>=1.0.0",
     "kaggle>=2.2.0",
     "roboflow>=1.3.9",
     "ultralytics>=8.4.57",
 ]
+
+[project.scripts]
+board-recognition = "board_recognition.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/board_recognition"]
